@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "my-search-input": "../../components/my-search-input/my-search-input",
+    "my-swiper": "../../components/my-swiper/my-swiper",
+    "my-cate": "./childrenCpts/my-cate/my-cate",
+    "my-floor": "./childrenCpts/my-floor/my-floor"
+  }
+}

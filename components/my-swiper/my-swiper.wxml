@@ -1,0 +1,8 @@
+<!--components/Swiper/Swiper.wxml-->
+<swiper class="swiper-container" style="height:{{maxHeight}}px" indicator-dots indicator-active-color="#eb4450" circular>
+  <block wx:for="{{swiperList}}" wx:key="index">
+    <swiper-item class="swiper-item">
+      <image src="{{item.image_src}}" bind:load="imageLoad" mode="widthFix"></image>
+    </swiper-item>
+  </block>
+</swiper>

@@ -1,0 +1,15 @@
+/* components/SearchInput/SearchInput.wxss */
+.search_container {
+  height: 90rpx;
+  padding: 20rpx;
+  background-color: var(--themeColor);
+}
+
+.search_container navigator {
+  height: 100%;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 3px;
+  color: #555;
+  background-color: #fff;
+}

@@ -1,0 +1,27 @@
+<!--pages/category/category.wxml-->
+<view class="category-container">
+  <scroll-view class="left-scroll" scroll-y>
+    <block wx:for="{{leftMenus}}" wx:key="index">
+      <view bind:tap="titleClick" data-index="{{index}}" class="left-item {{leftActiveIndex === index ? 'active' : ''}}">
+        {{item}}
+      </view>
+    </block>
+  </scroll-view>
+  <scroll-view class="right-scroll" scroll-y scroll-top="{{rightScrollTop}}">
+    <block wx:for="{{rightContents[leftActiveIndex]}}" wx:for-item="item1" wx:for-index="index1" wx:key="cat_id">
+      <view class="right-item">
+        <view class="title"><text class="line">/</text><text>{{item1.cat_name}}</text><text class="line">/</text></view>
+        <view class="content">
+          <block wx:for="{{item1.children}}" wx:for-item="item2" wx:for-index="index2" wx:key='cat_id'>
+            <navigator class="content-item">
+              <view class="image-box">
+                <image src="{{item2.cat_icon}}" mode="widthFix"></image>
+              </view>
+              <view class="name">{{item2.cat_name}}</view>
+            </navigator>
+          </block>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

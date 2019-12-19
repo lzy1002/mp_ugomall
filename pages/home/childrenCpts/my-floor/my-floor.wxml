@@ -1,0 +1,17 @@
+<!--pages/home/childrenCpts/my-floor/my-floor.wxml-->
+<view class="floor-container">
+  <block wx:for="{{floorList}}" wx:for-item="item1" wx:for-index="index1">
+    <view class="container-item">
+      <view class="title-img">
+        <image src="{{item1.floor_title.image_src}}" mode="widthFix"></image>
+      </view>
+      <view class="content">
+        <block wx:for="{{item1.product_list}}" wx:for-item="item2" wx:for-index="index2">
+          <navigator class="content-item">
+            <image src="{{item2.image_src}}" ></image>
+          </navigator>
+        </block>
+      </view>
+    </view>
+  </block>
+</view>

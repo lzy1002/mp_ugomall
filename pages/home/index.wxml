@@ -1,0 +1,8 @@
+<!--pages/home/home.wxml-->
+<my-search-input></my-search-input>
+
+<my-swiper swiperList="{{swiperList}}"></my-swiper>
+
+<my-cate cateList="{{cateList}}"></my-cate>
+
+<my-floor floorList="{{floorList}}"></my-floor>

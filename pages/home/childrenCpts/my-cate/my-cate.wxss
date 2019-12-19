@@ -1,0 +1,13 @@
+/* pages/home/childrenCpts/my-cate/my-cate.wxss */
+.cate-container {
+  display: flex;
+}
+
+.cate-container .cate-item {
+  flex: 1;
+  padding: 24rpx;
+}
+
+.cate-container .cate-item image {
+  width: 100%;
+}

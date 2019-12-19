@@ -1,0 +1,8 @@
+<!--pages/home/childrenCpts/my-cate/my-cate.wxml-->
+<view class="cate-container">
+  <block wx:for="{{cateList}}" wx:key="index">
+    <navigator class="cate-item">
+      <image src="{{item.image_src}}" mode="widthFix"></image>
+    </navigator>
+  </block>
+</view>
