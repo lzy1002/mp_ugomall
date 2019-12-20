@@ -1,0 +1,10 @@
+<!--pages/goods_list/childrenCpts/goods-item/goods-item.wxml-->
+<navigator class="goods-item-container" url="/pages/goods_detail/index?goodsId={{goodsItem.goods_id}}">
+  <view class="image-box">
+    <image src="{{goodsItem.goods_small_logo || '/assets/images/zanwu.jpg'}}" ></image>
+  </view>
+  <view class="content-box">
+    <view class="title">{{goodsItem.goods_name}}</view>
+    <view class="price">￥{{goodsItem.goods_price}}</view>
+  </view>
+</navigator>

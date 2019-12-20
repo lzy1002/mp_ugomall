@@ -1,0 +1,121 @@
+/* pages/goods_detail/index.wxss */
+page {
+  padding-bottom: 80rpx;
+}
+
+.swiper-item {
+  text-align: center;
+}
+
+.swiper-item image {
+  width: 66.66%;
+
+}
+
+.desc {
+  display: flex;
+}
+
+.desc-left {
+  flex: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-right: 1px solid #ccc;
+  padding-right: 30rpx;
+  padding-left: 10rpx;
+}
+
+.desc-left .price {
+  font-size: 32rpx;
+  color: var(--themeColor);
+}
+
+.desc-left .name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.desc-right {
+  flex: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.desc-right .icon-xingbian {
+  font-size: 36rpx;
+}
+
+.info .title {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  font-weight: 700;
+  color: var(--themeColor);
+  padding-left: 10rpx;
+}
+
+.bottom-bar {
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  height: 80rpx;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+}
+
+.left-item {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.left-item .iconfont {
+  font-size: 40rpx;
+}
+
+.left-item .text {
+  font-size: 24rpx;
+}
+
+.left-item .btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+}
+
+.right-item {
+  flex: 1;
+  line-height: 80rpx;
+  color: #fff;
+}
+
+.right-item:first-child {
+  background-color: gold;
+}
+
+.right-item:last-child {
+  background-color: var(--themeColor);
+}

@@ -1,0 +1,47 @@
+<!--pages/goods_detail/index.wxml-->
+<swiper class="swiper-container" style="height: {{maxHeight}}px" indicator-dots indicator-active-color="#eb4450" circular>
+  <block wx:for="{{goodsDetail.pics}}" wx:key="index">
+    <swiper-item class="swiper-item" bind:tap="showBigImage" data-url="{{item.pics_big_url}}">
+      <image src="{{item.pics_big_url}}" bind:load="imageLoad" mode="widthFix"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="desc">
+  <view class="desc-left">
+    <view class="price">￥{{goodsDetail.goods_price}}</view>
+    <view class="name">{{goodsDetail.goods_name}}</view>
+  </view>
+  <view class="desc-right">
+    <view class="iconfont icon-xingbian"></view>
+    <view>收藏</view>
+  </view>
+</view>
+
+<view class="info">
+  <view class="title">图文详情</view>
+  <rich-text nodes="{{goodsDetail.goods_introduce}}"></rich-text>
+</view>
+
+<view class="bottom-bar">
+  <view class="left">
+    <view class="left-item">
+      <view class="iconfont icon-kefu"></view>
+      <view class="text">联系客服</view>
+      <button class="btn" open-type="contact"></button>
+    </view>
+    <view class="left-item">
+      <view class="iconfont icon-icon--"></view>
+      <view class="text">分享</view>
+      <button class="btn" open-type="share"></button>
+    </view>
+    <navigator class="left-item" url="/pages/cart/index" open-type="switchTab">
+      <view class="iconfont icon-gouwuche"></view>
+      <view class="text">购物车</view>
+    </navigator>
+  </view>
+  <view class="right">
+    <view class="right-item" bind:tap="goCart">加入购物车</view>
+    <view class="right-item">立即购买</view>
+  </view>
+</view>

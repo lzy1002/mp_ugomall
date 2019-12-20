@@ -1,11 +1,30 @@
 // pages/cart/cart.js
+import {getSetting, chooseAddress, openSetting} from "../../utils/getAddress.js";
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    address: {}
+  },
+  getAddress() {  // 获取用户地址信息
+    getSetting().then(res1 => {
+      const scopeAddress = res1.authSetting["scope.address"];
+      if(scopeAddress === false) {
+        openSetting().then(() => {
+          chooseAddress().then(res2 => {
+            console.log(res2);
+            wx.setStorageSync("address", res2);
+          })
+        })
+      }
+      chooseAddress().then(res3 => {
+        console.log(res3);
+        wx.setStorageSync("address", res3);
+      })
+    })
   },
 
   /**
@@ -26,7 +45,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    const address = wx.getStorageSync("address");
+    if(address){
+      this.setData({
+        address
+      })
+    }
   },
 
   /**

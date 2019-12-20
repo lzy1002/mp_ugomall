@@ -1,1 +1,13 @@
 /* pages/cart/cart.wxss */
+.getAddress {
+  padding: 20rpx 0;
+}
+
+.address {
+  padding: 20rpx 10rpx;
+}
+
+.address .user-info {
+  display: flex;
+  justify-content: space-between;
+}

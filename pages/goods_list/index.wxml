@@ -1,0 +1,14 @@
+<!--pages/goods_list/goods_list.wxml-->
+<my-search-input></my-search-input>
+
+<my-tab-control tabList="{{tabList}}" bind:tabChange="tabChange"></my-tab-control>
+
+<view class="content">
+  <view class="content-item" wx:if="{{activeIndex === 0}}">
+    <block wx:for="{{goodsList}}" wx:key="index">
+      <my-goods-item goodsItem="{{item}}"></my-goods-item>
+    </block>
+  </view>
+  <view class="content-item" wx:if="{{activeIndex === 1}}">2</view>
+  <view class="content-item" wx:if="{{activeIndex === 2}}">3</view>
+</view>

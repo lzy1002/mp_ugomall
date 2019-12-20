@@ -42,7 +42,7 @@ Page({
    */
   onLoad: function (options) {
     const cates = wx.getStorageSync("cates");
-    if(!cates){
+    if(!cates || cates.data.length <= 0){
       this.getCategoryList();
     }else {
       if(Date.now() - cates.time > 1000 * 60 * 10) {

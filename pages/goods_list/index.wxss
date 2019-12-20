@@ -1,0 +1,17 @@
+/* pages/goods_list/goods_list.wxss */
+page {
+  height: 100%;
+}
+
+.content {
+  position: relative;
+  height: 100%;
+}
+
+.content .content-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
