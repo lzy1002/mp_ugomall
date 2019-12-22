@@ -1,15 +1,31 @@
 <!--pages/cart/cart.wxml-->
-<view class="getAddress" wx:if="{{!address.cityName}}">
-  <button bind:tap="getAddress" type="primary" plain>授权地址信息</button>
+<view class="address-box">
+  <view class="getAddress" wx:if="{{!address.cityName}}">
+    <button bind:tap="getAddress" type="primary" plain>授权地址信息</button>
+  </view>
+  <my-address address="{{address}}" wx:else></my-address>
 </view>
-<view class="address" wx:else>
-  <view class="user-info">
-    <text>收货人: {{address.userName}}</text>
-    <text>{{address.telNumber}}</text>
+
+<view class="cart-box" wx:if="{{cartList.length > 0}}">
+  <view class="cart-title">购物车</view>
+  <view class="cart-main">
+    <block wx:for="{{cartList}}" wx:key="index">
+      <my-cart-item cartItemData="{{item}}" index="{{index}}" bind:checkboxChange="checkboxChange" bind:changeNum="changeNum"></my-cart-item>
+    </block>
   </view>
-  <view class="address-info">
-    <text>{{address.cityName}}</text>
-    <text>{{address.countyName}}</text>
-    <text>{{address.detailInfo}}</text>
+</view>
+<view class="block" wx:else>
+  <image src="/assets/images/zanwushuju.png" mode="widthFix"></image>
+</view>
+
+
+<view class="bottom-bar">
+  <checkbox-group class="left" bind:change="allCheckboxChange">
+    <checkbox checked="{{allChecked}}">全选</checkbox>
+  </checkbox-group>
+  <view class="center">
+    <view class="total-price">合计：￥{{totalPrice}}</view>
+    <view>包含运费</view>
   </view>
+  <view class="right" bind:tap="pay">结算({{totalNum}})</view>
 </view>

@@ -1,0 +1,71 @@
+/* pages/pay/index.wxss */
+page {
+  padding-bottom: 80rpx;
+}
+
+.goods-container .goods-item {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+.goods-item .image {
+  flex: 2;
+  padding: 0 20rpx;
+}
+
+.goods-item .image image {
+  width: 100%;
+}
+
+.goods-item .content {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 20rpx;
+}
+
+.goods-item .content .name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.goods-item .content .info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.goods-item .content .info .price {
+  font-weight: 700;
+  color: var(--themeColor);
+}
+
+.bottom-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+.bottom-bar .left {
+  flex: 3;
+  text-align: right;
+}
+
+.bottom-bar .left .total-price {
+  font-weight: 700;
+  color: var(--themeColor);
+}
+
+.bottom-bar .right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: var(--themeColor);
+}

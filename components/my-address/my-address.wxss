@@ -1,0 +1,9 @@
+/* components/my-address/my-address.wxss */
+.address {
+  padding: 20rpx 10rpx;
+}
+
+.address .user-info {
+  display: flex;
+  justify-content: space-between;
+}

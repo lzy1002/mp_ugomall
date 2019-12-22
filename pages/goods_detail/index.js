@@ -22,7 +22,8 @@ Page({
           goods_id: res.data.message.goods_id,
           goods_name: res.data.message.goods_name,
           goods_price: res.data.message.goods_price,
-          goods_introduce: res.data.message.goods_introduce.replace("/\.webp/g", ".jpg")
+          goods_introduce: res.data.message.goods_introduce.replace("/\.webp/g", ".jpg"),
+          goods_small_logo: res.data.message.goods_small_logo
         }
       })
       console.log(this.data.goodsDetail.pics);
@@ -57,6 +58,7 @@ Page({
     if(index === -1){
       const goodsDetail = this.data.goodsDetail;
       goodsDetail.num = 1;
+      goodsDetail.checked = true;
       cart.push(goodsDetail);
       wx.showToast({
         title: '添加到购物车',

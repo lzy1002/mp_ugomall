@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "my-address": "/components/my-address/my-address",
+    "my-cart-item": "/components/my-cart-item/my-cart-item"
+  }
 }

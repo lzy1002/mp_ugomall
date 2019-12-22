@@ -1,0 +1,12 @@
+<!--components/my-address/my-address.wxml-->
+<view class="address">
+  <view class="user-info">
+    <text>收货人: {{address.userName}}</text>
+    <text>{{address.telNumber}}</text>
+  </view>
+  <view class="address-info">
+    <text>{{address.cityName}}</text>
+    <text>{{address.countyName}}</text>
+    <text>{{address.detailInfo}}</text>
+  </view>
+</view>

@@ -6,7 +6,7 @@ export function request(option) {
       url: BASEURL + option.url,
       method: option.method || "get",
       data: option.data || {},
-      header: option.header || {},
+      header: option.url.includes("/my/") ? {...option.header, Authorization: wx.getStorageSync("token")} : {...option.header},
       success: resolve,
       fail: reject
     })

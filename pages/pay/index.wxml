@@ -1,0 +1,27 @@
+<!--pages/pay/index.wxml-->
+<my-address address="{{address}}"></my-address>
+
+<view class="goods-container">
+  <block wx:for="{{cartList}}" wx:key="index">
+    <view class="goods-item">
+      <view class="image">
+        <image src="{{item.goods_small_logo}}" mode="widthFix"></image>
+      </view>
+      <view class="content">
+        <view class="name">{{item.goods_name}}</view>
+        <view class="info">
+          <text class="price">￥{{item.goods_price}}</text>
+          <text class="count">x{{item.num}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<view class="bottom-bar">
+  <view class="left">
+    <view class="total-price">合计：￥{{totalPrice}}</view>
+    <view>包含运费</view>
+  </view>
+  <view class="right" bind:tap="pay">支付({{totalNum}})</view>
+</view>

@@ -1,0 +1,20 @@
+<!--pages/cart/childrenCpts/my-cart-item/my-cart-item.wxml-->
+<view class="cart-item">
+  <checkbox-group class="checkbox" bind:change="checkboxChange">
+    <checkbox checked="{{cartItemData.checked}}"></checkbox>
+  </checkbox-group>
+  <view class="item-image">
+    <image src="{{cartItemData.goods_small_logo}}" mode="widthFix"></image>
+  </view>
+  <view class="item-content">
+    <view class="name">{{cartItemData.goods_name}}</view>
+    <view class="info">
+      <view class="price">￥{{cartItemData.goods_price}}</view>
+      <view class="count-box">
+        <view class="count-item" bind:tap="changeNum" data-math="{{-1}}">-</view>
+        <view class="count">{{cartItemData.num}}</view>
+        <view class="count-item" bind:tap="changeNum" data-math="{{1}}">+</view>
+      </view>
+    </view>
+  </view>
+</view>
