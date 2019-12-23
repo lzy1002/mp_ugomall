@@ -1,22 +1,19 @@
-// pages/profile/index.js
+// pages/feedback/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userInfo: {},
-    collectLength: 0
+    tabList: ["体验问题", "商家、商品投诉"],
+    activeIndex: 0
   },
-  getUserInfo(event) {
-    console.log(event);
-    const {userInfo} = event.detail;
-    wx.setStorageSync("userinfo", userInfo);
+  tabChange(event) {
+    console.log(event.detail.index);
     this.setData({
-      userInfo
+      activeIndex: event.detail.index
     })
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -35,13 +32,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    const userInfo = wx.getStorageSync("userinfo");
-    const collections = wx.getStorageSync("collections");
 
-    this.setData({
-      userInfo,
-      collectLength: collections.length
-    })
   },
 
   /**

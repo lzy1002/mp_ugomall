@@ -1,11 +1,19 @@
-// pages/profile/profile.js
+// pages/collect/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    tabList: ["商品收藏", "品牌收藏", "店铺收藏", "浏览足迹"],
+    activeIndex: 0,
+    listData: []
+  },
+  tabChange(event) {
+    console.log(event);
+    this.setData({
+      activeIndex: event.detail.index
+    })
   },
 
   /**
@@ -26,7 +34,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({
+      listData: wx.getStorageSync("collections")
+    })
+    console.log(wx.getStorageSync("collections"));
   },
 
   /**

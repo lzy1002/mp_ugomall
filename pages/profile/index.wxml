@@ -1,2 +1,67 @@
 <!--pages/profile/index.wxml-->
-<text>pages/profile/index.wxml</text>
+<view class="userinfo-box">
+  <block wx:if="{{userInfo.nickName}}">
+    <view class="bg-box">
+      <image class="bg-avatar" src="{{userInfo.avatarUrl}}" mode="scaleToFill"></image>
+    </view>
+    <view class="userinfo">
+      <image class="avatar" src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
+      <view class="name">{{userInfo.nickName}}</view>
+    </view>
+  </block>
+  <button wx:else class="getuserinfo" open-type="getUserInfo" bind:getuserinfo="getUserInfo">登录</button>
+</view>
+
+<view class="collection-box">
+  <navigator class="collection-item">
+    <view class="num">0</view>
+    <view class="title">收藏的店铺</view>
+  </navigator>
+  <navigator class="collection-item" url="/pages/collect/index">
+    <view class="num">{{collectLength}}</view>
+    <view class="title">收藏的商品</view>
+  </navigator>
+  <navigator class="collection-item">
+    <view class="num">0</view>
+    <view class="title">关注的商品</view>
+  </navigator>
+  <navigator class="collection-item">
+    <view class="num">0</view>
+    <view class="title">我的足迹</view>
+  </navigator>
+</view>
+
+<view class="order-box">
+  <view class="title">我的订单</view>
+  <view class="item-box">
+    <view class="order-item">
+      <view class="iconfont icon-danju"></view>
+      <view class="name">全部订单</view>
+    </view>
+    <view class="order-item">
+      <view class="iconfont icon-fukuantongzhi"></view>
+      <view class="name">待付款</view>
+    </view>
+    <view class="order-item">
+      <view class="iconfont icon-receipt-address"></view>
+      <view class="name">待收货</view>
+    </view>
+    <view class="order-item">
+      <view class="iconfont icon-tuikuan"></view>
+      <view class="name">退货/退款</view>
+    </view>
+  </view>
+</view>
+
+<view class="address-box">收货地址管理</view>
+
+<view class="feedback-box">
+  <view class="feedback-item">
+    <text>联系客服</text>
+    <text>400-618-4000</text>
+  </view>
+  <navigator class="feedback-item" url="/pages/feedback/index">意见反馈</navigator>
+  <view class="feedback-item">关于我们</view>
+</view>
+
+<view class="recommend">把应用推荐给其他人</view>

@@ -1,0 +1,30 @@
+<!--pages/feedback/index.wxml-->
+<my-tab-control tabList="{{tabList}}" bind:tabChange="tabChange"></my-tab-control>
+
+<view class="feedback-main">
+  <view wx:if="{{activeIndex === 0}}">
+    <view class="title">问题的种类</view>
+    <view class="block-box">
+      <view class="block-item">功能建议</view>
+      <view class="block-item">购买遇到问题</view>
+      <view class="block-item">性能问题</view>
+      <view class="block-item">其他</view>
+    </view>
+    <view class="edit-box">
+      <textarea placeholder="请描述您的问题"></textarea>
+      <view class="upload-box">
+        <button class="upload-image" size="mini">+</button>
+
+      </view>
+    </view>
+    <view class="submit-box">
+      <button class="submit">
+        <icon type="success_no_circle" color="#fff" size="30"></icon>
+        <text>提交</text>
+      </button>
+    </view>
+  </view>
+  <view wx:if="{{activeIndex === 1}}">
+    商品、商家投诉
+  </view>
+</view>

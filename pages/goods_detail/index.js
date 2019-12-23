@@ -11,7 +11,8 @@ Page({
     goodsDetail: {},
     windowWidth: 0,
     imageHeightList: [],
-    maxHeight: 0
+    maxHeight: 0,
+    isCollection: false
   },
   getGoodsDetailData(goodsId) {
     getGoodsDetailData(goodsId).then((res) => {
@@ -75,6 +76,21 @@ Page({
     }
     wx.setStorageSync("cart", cart);
   },
+  collection() {
+    const collections = wx.getStorageSync("collections") || [];
+    console.log(collections);
+    const index = collections.findIndex(item => item.goods_id.toString() === this.data.goodsId);
+    console.log(index);
+    if(index === -1) {
+      collections.push(this.data.goodsDetail);
+    }else {
+      collections.splice(index, 1);
+    }
+    wx.setStorageSync("collections", collections);
+    this.setData({
+      isCollection: index === -1 ? true : false
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -105,6 +121,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    const collections = wx.getStorageSync("collections") || [];
+    const index = collections.findIndex(item => item.goods_id.toString() === this.data.goodsId);
+    if(index === -1) return;
+    this.setData({
+      isCollection: true
+    })
 
   },
 

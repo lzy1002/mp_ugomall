@@ -1,9 +1,6 @@
 {
   "usingComponents": {
-    "my-search-input": "/components/my-search-input/my-search-input",
     "my-tab-control": "/components/my-tab-control/my-tab-control",
     "my-goods-item": "/components/my-goods-item/my-goods-item"
-  },
-  "enablePullDownRefresh": true,
-  "backgroundTextStyle": "dark"
+  }
 }

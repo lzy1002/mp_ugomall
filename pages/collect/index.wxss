@@ -1,0 +1,5 @@
+/* pages/collect/index.wxss */
+page {
+  height: 100vh;
+}
+

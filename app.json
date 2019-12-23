@@ -8,7 +8,9 @@
     "pages/goods_list/index",
     "pages/goods_detail/index",
     "pages/pay/index",
-    "pages/auth/index"
+    "pages/auth/index",
+    "pages/collect/index",
+    "pages/feedback/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

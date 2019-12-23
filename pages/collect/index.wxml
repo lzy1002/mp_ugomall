@@ -1,0 +1,13 @@
+<!--pages/collect/index.wxml-->
+<my-tab-control tabList="{{tabList}}" bind:tabChange="tabChange"></my-tab-control>
+
+<view class="main">
+  <view class="main-item" wx:if="{{activeIndex === 0}}">
+    <block wx:for="{{listData}}" wx:key="index">
+      <my-goods-item goodsItem="{{item}}"></my-goods-item>
+    </block>
+  </view>
+  <view class="main-item" wx:if="{{activeIndex === 1}}">品牌收藏</view>
+  <view class="main-item" wx:if="{{activeIndex === 2}}">店铺收藏</view>
+  <view class="main-item" wx:if="{{activeIndex === 3}}">浏览足迹</view>
+</view>

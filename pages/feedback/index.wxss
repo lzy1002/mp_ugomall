@@ -1,0 +1,68 @@
+/* pages/feedback/index.wxss */
+page {
+  color: #333;
+  background-color: #eee;
+}
+
+.feedback-main {
+  padding: 20rpx;
+}
+
+.title {
+  margin-bottom: 20rpx;
+}
+
+.block-box {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40rpx;
+}
+
+.block-box .block-item {
+  padding: 10rpx 40rpx;
+  margin: 20rpx 10rpx 0 10rpx;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.edit-box {
+  background-color: #fff;
+  padding: 16rpx;
+}
+
+.upload-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.upload-box .upload-image {
+  width: 90rpx;
+  height: 90rpx;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
+  color: #555;
+}
+
+.submit-box {
+  position: relative;
+  text-align: right;
+  margin-top: 20rpx;
+}
+
+.submit-box .submit {
+  position: absolute;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200rpx;
+  background-color: #ee4b50;
+  color:#fff;
+  text-align: center;
+}

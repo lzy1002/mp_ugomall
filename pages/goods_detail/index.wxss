@@ -46,8 +46,12 @@ page {
   text-align: center;
 }
 
-.desc-right .icon-xingbian {
+.desc-right .icon-xingbian, .icon-shoucang {
   font-size: 36rpx;
+}
+
+.desc-right .icon-shoucang.active {
+  color: var(--themeColor);
 }
 
 .info .title {

@@ -12,8 +12,8 @@
     <view class="price">￥{{goodsDetail.goods_price}}</view>
     <view class="name">{{goodsDetail.goods_name}}</view>
   </view>
-  <view class="desc-right">
-    <view class="iconfont icon-xingbian"></view>
+  <view class="desc-right" bind:tap="collection">
+    <view class="iconfont {{isCollection ? 'icon-shoucang active' : 'icon-xingbian'}}"></view>
     <view>收藏</view>
   </view>
 </view>

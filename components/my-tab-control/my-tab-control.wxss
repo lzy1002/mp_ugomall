@@ -1,6 +1,7 @@
 /* components/my-tab-control/my-tab-control.wxss */
 .tab-container {
   display: flex;
+  background-color: #fff;
 }
 
 .tab-item {
