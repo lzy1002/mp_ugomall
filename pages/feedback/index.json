@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "my-tab-control": "/components/my-tab-control/my-tab-control"
+    "my-tab-control": "/components/my-tab-control/my-tab-control",
+    "my-up-image-item": "/components/my-up-image-item/my-up-image-item"
   }
 }

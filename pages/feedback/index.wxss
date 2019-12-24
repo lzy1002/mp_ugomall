@@ -39,12 +39,16 @@ page {
   width: 90rpx;
   height: 90rpx;
   padding: 0;
-  margin: 0;
+  margin: 0 20rpx 20rpx 0;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 40rpx;
   color: #555;
+}
+
+.upload-box .image-item {
+  margin: 0 20rpx 20rpx 0;
 }
 
 .submit-box {

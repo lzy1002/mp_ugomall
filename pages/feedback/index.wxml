@@ -11,14 +11,18 @@
       <view class="block-item">其他</view>
     </view>
     <view class="edit-box">
-      <textarea placeholder="请描述您的问题"></textarea>
+      <textarea placeholder="请描述您的问题" bind:input="inputChange" value="{{textValue}}"></textarea>
       <view class="upload-box">
-        <button class="upload-image" size="mini">+</button>
-
+        <button class="upload-image" size="mini" bind:tap="uploadImage">+</button>
+        <block wx:for="{{upImageList}}" wx:key="*this">
+          <view class="image-item" bind:tap="showBigImage" data-index="{{index}}">
+            <my-up-image-item imageUrl="{{item}}" index="{{index}}" bind:deleteImage="deleteImage"></my-up-image-item>
+          </view>
+        </block>
       </view>
     </view>
     <view class="submit-box">
-      <button class="submit">
+      <button class="submit" bind:tap="submit">
         <icon type="success_no_circle" color="#fff" size="30"></icon>
         <text>提交</text>
       </button>

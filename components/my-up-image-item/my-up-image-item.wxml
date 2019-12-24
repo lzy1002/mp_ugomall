@@ -1,0 +1,7 @@
+<!--components/my-up-image-item/my-up-image-item.wxml-->
+<view class="up-image">
+  <view class="icon-box" catch:tap="deleteImage">
+    <icon type="cancel" color="red"></icon>
+  </view>
+  <image src="{{imageUrl}}"></image>
+</view>
